@@ -1,0 +1,7 @@
+{
+  "name": "pokegains",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
