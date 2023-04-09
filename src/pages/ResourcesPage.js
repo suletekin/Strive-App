@@ -1,13 +1,11 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 
-
-const Page3 = () => {
+const ResourcesPage = () => {
   return (
     <IonPage>
     <IonHeader>
       <IonToolbar>
-        <IonTitle><p style={{fontSize: '20px', textAlign: 'center'}}>Page3</p></IonTitle>
+        <IonTitle><p style={{fontSize: '20px', textAlign: 'center'}}>Resources</p></IonTitle>
       </IonToolbar>
     </IonHeader>
 
@@ -16,13 +14,13 @@ const Page3 = () => {
 
       <IonHeader collapse="condense">
         <IonToolbar>
-          <IonTitle size="large">Page3</IonTitle>
+          <IonTitle size="large">Resources</IonTitle>
         </IonToolbar>
       </IonHeader>
-
+      
     </IonContent>
   </IonPage>
   );
 };
 
-export default Page3;
+export default ResourcesPage;

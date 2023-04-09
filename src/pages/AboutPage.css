@@ -1,0 +1,9 @@
+.expandable {
+    transform: scale(1.0);
+    transition: transform 170ms;
+}
+
+.expandable:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}

@@ -1,0 +1,15 @@
+.token {
+    transform: scale(1.0);
+    transition: transform 170ms;
+}
+
+.token:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.outline {
+    text-shadow: -2px 2px 0 #000,
+				  2px 2px 0 #000,
+				 2px -2px 0 #000;
+}

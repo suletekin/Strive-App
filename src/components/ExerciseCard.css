@@ -1,0 +1,32 @@
+.exercisecard {
+    transform: scale(1.0);
+
+    text-shadow: -1px 2px 2px #000,
+				  1px 2px 2px #000,
+				 1px -2px 2px #000;
+
+    transition: transform 170ms;
+}
+
+.exercisecard:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+.bar:hover {
+    
+}
+
+a{text-decoration:none;}
+.stretch_it{
+    white-space: nowrap;
+}
+.justify{
+    text-align:justify;
+}
+
+.one{font-size:10px;}
+.two{font-size:20px;}
+.three{font-size:30px;}
+.four{font-size:40px;}
+.arial{font-family:arial;}

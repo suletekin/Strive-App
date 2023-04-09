@@ -13,11 +13,14 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { IonMenu, IonPage } from '@ionic/react';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonMenuToggle } from '@ionic/react';
-import { ellipse, pencil, barbell, calculator, triangle } from 'ionicons/icons';
-import Page1 from './pages/Page1';
-import Page2 from './pages/Page2';
-import Page4 from './pages/Page4';
-import Page3 from './pages/Page3';
+import { ellipse, pencil, barbell, calculator, triangle, home, calendarOutline, helpCircleOutline} from 'ionicons/icons';
+
+import AboutPage from './pages/AboutPage';
+import EventsPage from './pages/EventsPage';
+import ResourcesPage from './pages/ResourcesPage';
+import HomePage from './pages/HomePage';
+import PerformPage from './pages/PerformPage';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -43,7 +46,6 @@ import './theme/variables.css';
 setupIonicReact();
 
 const App = () => {
-
   return (
     <IonApp>
       <IonReactRouter>
@@ -79,41 +81,44 @@ const App = () => {
           <IonRouterOutlet>
 
 
-            <Route exact path="/page1" component={Page1}/>
+            <Route exact path="/HomePage" component={HomePage}/>
 
-            <Route exact path="/page2" component={Page2}/>
+            <Route exact path="/AboutPage" component={AboutPage}/>
 
-            <Route exact path="/page3"component={Page3}/>
+            <Route exact path="/ResourcesPage"component={ResourcesPage}/>
 
-            <Route exact path="/page4" component={Page4}/>
+            <Route exact path="/EventsPage" component={EventsPage}/>
+
+            <Route path="/PerformPage/:id" component={PerformPage}/>
+
 
 
             <Route exact path="/">
-              <Redirect to="/page1" />
+              <Redirect to="/HomePage" />
             </Route>
 
           </IonRouterOutlet>
 
           <IonTabBar slot="bottom">
 
-            <IonTabButton tab="page1" href="/page1">
-              <IonIcon icon={barbell} />
-              <IonLabel>Page 1</IonLabel>
+            <IonTabButton tab="Home" href="/HomePage">
+              <IonIcon icon={home} />
+              <IonLabel>Home</IonLabel>
             </IonTabButton>
 
-            <IonTabButton tab="page2" href="/page2">
-              <IonIcon icon={ellipse} />
-              <IonLabel>Page 2</IonLabel>
+            <IonTabButton tab="About" href="/AboutPage">
+              <IonIcon icon={helpCircleOutline} />
+              <IonLabel>About</IonLabel>
             </IonTabButton>
 
-            <IonTabButton tab="page3" href="/page3">
+            <IonTabButton tab="Resources" href="/ResourcesPage">
               <IonIcon icon={calculator} />
-              <IonLabel>Page 3</IonLabel>
+              <IonLabel>Resources</IonLabel>
             </IonTabButton>
 
-            <IonTabButton tab="page4" href="/page4">
-              <IonIcon icon={triangle} />
-              <IonLabel>Page 4</IonLabel>
+            <IonTabButton tab="Events" href="/EventsPage">
+              <IonIcon icon={calendarOutline} ></IonIcon>
+              <IonLabel>Events</IonLabel>
             </IonTabButton>
 
           </IonTabBar>
