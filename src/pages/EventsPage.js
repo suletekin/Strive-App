@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonMenu, IonMenuToggle, IonButton, IonDatetime, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle } from '@ionic/react';
 import ApiCalendar from "react-google-calendar-api";
-import React from 'react';
+import { React, useEffect } from 'react';
 
 const config = {
   clientId: "857965574667-2ck09b4mt4uhr65b2ebe8regd2aj5r1p.apps.googleusercontent.com",
@@ -28,7 +28,8 @@ const getEvents = () => {
 }
 
 const EventsPage = () => {
-  getEvents();
+  useEffect ( getEvents, [])
+  //getEvents();
   return (
     <IonPage>
     <IonHeader>
@@ -51,7 +52,7 @@ const EventsPage = () => {
       <div style={{width:'80%', margin:'auto'}}>
         <ion-card>
           <ion-card-header>
-            <ion-card-title>Event Name Here</ion-card-title>
+            <ion-card-content>Enter Event Name</ion-card-content>
             <ion-card-subtitle>Time: 00:00:00AM | Location: GDC 2.100</ion-card-subtitle>
           </ion-card-header>
 
@@ -60,6 +61,7 @@ const EventsPage = () => {
             with fleece as white as snow
           </ion-card-content>
         </ion-card>
+
       </div>
 
     </IonContent>

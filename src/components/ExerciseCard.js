@@ -66,7 +66,7 @@ function ExerciseCard(props) {
         <div className="bar" style={{marginTop: '5px', marginBottom: '10px', width: '100%', height: '10%', display: 'flex', justifyContent: 'center'}}>
             <div onClick={() => props['onClick'](props)} className="exercisecard" style={{display: 'flex', justifyContent: 'center', flexDirection: 'row', marginLeft: '10px', marginRight: '10px', width: '100%', height: '100%'}}>
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%'}}>
-                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '85%', height: '85%', border: '5px solid black', borderWidth: '3px', borderRadius: '20px',backgroundImage: 'url(' + props['img'] + ')'}}>
+                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '85%', height: '85%', border: '2px solid white', borderRadius: '20px',backgroundImage: 'url(' + props['img'] + ')'}}>
 
                         <div style={{ width: '60%', height: '100%'}}>
 

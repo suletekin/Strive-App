@@ -7,3 +7,28 @@
     cursor: pointer;
     transform: scale(1.10);
 }
+
+p {
+    font-family: geneva;
+}
+
+li {
+    font-family: geneva;
+}
+
+.aboutH1 {
+    font-family: andaleMono;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 30px;
+    border: 10px solid transparent;
+    border-color: #000000;
+    width: 80%;
+    border-image-slice: 1; /* set the border image to slice evenly */
+    border-image-width: 12px; /* set the width of the border image */
+    border-image-outset: 0px;
+    background-color: #000000;
+}
+
+

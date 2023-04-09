@@ -137,11 +137,11 @@ const ExerciseEditModal = forwardRef((props, ref) => {
                             </div>
 
                             <div style={{backgroundColor: 'rgb(22,22,22)', width: '110%', height: '40px', border: '5px solid black', borderWidth: '3px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                                <h1 style={{fontSize: '16px', margin: '0px'}}>Cooldown: </h1>
+                                <h1 style={{fontSize: '16px', margin: '0px'}}>Time Remaining: <strong style={{color: timeRemainingColor}}>{secondsFormat(timeRemaining)}</strong></h1>
                             </div>
 
                             <div style={{backgroundColor: 'rgb(22,22,22)', width: '110%', height: '40px', border: '5px solid black', borderWidth: '3px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                                <h1 style={{fontSize: '16px', margin: '0px'}}>Time Remaining: <strong style={{color: timeRemainingColor}}>{secondsFormat(timeRemaining)}</strong></h1>
+                                <h1 style={{fontSize: '16px', margin: '0px'}}>Progress: <strong style={{color: timeRemainingColor}}>{secondsFormat(timeRemaining)}</strong></h1>
                             </div>
 
                             <div style={{backgroundColor: 'rgb(22,22,22)', width: '110%', height: '80px', border: '5px solid black', borderWidth: '3px', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
