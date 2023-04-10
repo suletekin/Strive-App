@@ -15,6 +15,8 @@ const CALENDAR_ID = "33236639fc60de7e5a2dd323acbf2da9b2f5ab593ec0a27bcce17d4fc0c
 
 const apiCalendar = new ApiCalendar(config);
 
+const events = new Map();
+
 const getEvents = () => {
   apiCalendar.listEvents({
     calendarId: CALENDAR_ID,
@@ -22,10 +24,29 @@ const getEvents = () => {
     showDeleted: false,
     maxResults: 100,
     orderBy: 'updated'
-  }).then(({ result }) => {
-  console.log(result.items);
+  }).then(({result }) => {
+    for (let e of result) {
+      events.set(e.start.date, {title: e.summary, subtitle: ",eow"})
+    }
   });
 }
+
+var highlightedDates = [
+  {
+    date: '2023-04-05',
+    textColor: '#800080',
+    backgroundColor: '#ffc0cb',
+  },
+  {
+    date: '2023-04-10',
+    textColor: '#09721b',
+    backgroundColor: '#c8e5d0',
+  }
+];
+
+const date = new Date();
+const currentDate = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`;
+let selectedDate = currentDate;
 
 const EventsPage = () => {
   useEffect ( getEvents, [])
@@ -47,12 +68,12 @@ const EventsPage = () => {
         </IonToolbar>
       </IonHeader>
       <div style={{ width: '80%', margin:'auto', marginTop:"5%", display: 'flex', justifyContent: 'center'}}>
-      <IonDatetime min="2023" presentation="date" size="cover"></IonDatetime>
+      <ion-datetime value={selectedDate} highlightedDates={highlightedDates} min="2023" presentation="date" size="cover" preferWheel="false" ></ion-datetime>
       </div>
       <div style={{width:'80%', margin:'auto'}}>
         <ion-card>
           <ion-card-header>
-            <ion-card-content>Enter Event Name</ion-card-content>
+            <ion-card-title>Enter Event Name</ion-card-title>
             <ion-card-subtitle>Time: 00:00:00AM | Location: GDC 2.100</ion-card-subtitle>
           </ion-card-header>
 

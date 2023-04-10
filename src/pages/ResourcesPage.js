@@ -19,10 +19,19 @@ const ResourcesPage = () => {
             </IonToolbar>
           </IonHeader>
         
-          <h1 style={{textAlign: "center", fontFamily: "AndaleMono", fontSize: "30px", fontWeight: "600"}}> Scholarships Link</h1>
-          <p style={{textAlign: "center", marginLeft: "20px", fontSize: "20px", marginRight: "20px", marginTop: "-7px"}}> Sample link</p>
+          <h1 style={{textAlign: "left", fontFamily: "AndaleMono", fontSize: "30px", fontWeight: "600"}}> Scholarships</h1>
+          <p style={{textAlign: "center", marginLeft: "20px", fontSize: "20px", marginRight: "20px", marginTop: "-7px"}}> Tito's Way Scholarship</p>
 
-          <h1 style={{textAlign: "center", fontFamily: "AndaleMono", fontSize: "30px", fontWeight: "600"}}> Donations! </h1>
+          <h1 style={{textAlign: "left", fontFamily: "AndaleMono", fontSize: "30px", fontWeight: "600"}}> Donations! </h1>
+          <p style={{textAlign: "center", marginLeft: "20px", fontSize: "20px", marginRight: "20px", marginTop: "-7px"}}>Donate here</p>
+
+          <h1 style={{textAlign: "left", fontFamily: "AndaleMono", fontSize: "30px", fontWeight: "600"}}> Internships! </h1>
+          <p style={{textAlign: "center", marginLeft: "20px", fontSize: "20px", marginRight: "20px", marginTop: "-7px"}}> Sample links</p>
+
+          <h1 style={{textAlign: "left", fontFamily: "AndaleMono", fontSize: "30px", fontWeight: "600"}}> Newsletter! </h1>
+          <p style={{textAlign: "center", marginLeft: "20px", fontSize: "20px", marginRight: "20px", marginTop: "-7px"}}> Sample links</p>
+
+          <h1 style={{textAlign: "left", fontFamily: "AndaleMono", fontSize: "30px", fontWeight: "600"}}> Strive Hangout! </h1>
           <p style={{textAlign: "center", marginLeft: "20px", fontSize: "20px", marginRight: "20px", marginTop: "-7px"}}> Sample links</p>
 
 

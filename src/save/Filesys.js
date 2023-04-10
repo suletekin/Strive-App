@@ -7,6 +7,7 @@ function temp_build_exercise() {
         id: -1
         ,name: 'None'
         ,img: StriveBannerBkg
+        ,completed: 0
         
         ,lifetimeGains: 0
 

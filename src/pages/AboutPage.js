@@ -31,7 +31,7 @@ const AboutPage = () => {
       
       <h1 style={{textAlign: "center", fontSize: "30px", borderWidth:"5px", borderStyle: "solid", borderColor: "#FFFFFF"}}>Inspiring through networking, mentorship & education.</h1>
       <IonIcon src={locationOutline} style={{fontSize: '2em', marginLeft: "40px", marginTop: "10px"}}/>
-      <IonHeader style={{marginLeft: "80px", marginTop: "-33px", fontSize: "25px"}} >El Paso, TX — Est. 2022</IonHeader>
+      <h1 style={{marginLeft: "80px", marginTop: "-33px", fontSize: "25px", textDecoration: "none"}} >El Paso, TX — Est. 2022</h1>
 
       <h1 className='aboutH1'> Our Vision</h1>
       <p className = "p" style={{textAlign: "center", marginLeft: "20px", fontSize: "20px", marginRight: "20px", marginTop: "-7px"}}>Strive Now's Vision is to empower you to fulfill your potential for today and

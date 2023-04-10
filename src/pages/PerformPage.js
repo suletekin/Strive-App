@@ -5,9 +5,6 @@ import './AboutPage.css';
 import ProgressBar from '../components/ProgressBar';
 import { exercises } from '../save/Filesys';
 
-function exerciseProgressChanged (exer, ) {
-
-}
 
 const PerformPage = ( {match} ) => {
 
@@ -23,14 +20,22 @@ const PerformPage = ( {match} ) => {
     // Get Exercise
     let exercise_id = match.url.slice(12 + 1); // trim off the first 8 characters from the url -> P e r f o r m P a g e /
     setExer(exercises[exercise_id]);
+    setCompleted(exercises[exercise_id]['completed'])
+
+    // Periodically Save
+    //const interval = setInterval(() => write_json('exercises.json', exercises), 5000);
 
     // Progress Bar Interval
-    const interval_bar = setInterval(() => setCompleted(Math.floor(Math.random() * 100) + 1), 2000);
-
+    const interval_bar = setInterval(() => {
+      if (playing) {
+        setCompleted((prevCompleted) => prevCompleted + 1);
+      }
+    }, 1000);
     setTimeBased(exercises[exercise_id]['duration'] === undefined ? false : true);
 
     return () => {
       clearInterval(interval_bar);
+      //clearInterval(interval);
     };
   });
 
@@ -69,7 +74,7 @@ const PerformPage = ( {match} ) => {
         </strong>
 
         
-        <div style={{padding: '20px', backgroundColor: 'transparent', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: 'auto%'}}>
+        <div style={{padding: '20px', backgroundColor: 'transparent', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: 'auto'}}>
           <div onClick={() => {setPlaying(!playing)}} className="expandable" style={{border: '5px solid white', margin: 'auto', borderRadius: '70px', width: '300px', height: '300px', backgroundColor: 'black'}}>
             <IonIcon style={{width: '100%', height: '100%'}} src={ playing ? (timeBased ? pauseOutline : checkmarkOutline) : (timeBased ? playOutline : closeOutline)}></IonIcon>
           </div>
