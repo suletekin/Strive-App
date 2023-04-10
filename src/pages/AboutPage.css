@@ -22,8 +22,8 @@ li {
     margin-right: auto;
     text-align: center;
     font-size: 30px;
-    border: 10px solid transparent;
-    border-color: #000000;
+    border: 3px solid transparent;
+    border-color: #2b37a9;
     width: 80%;
     border-image-slice: 1; /* set the border image to slice evenly */
     border-image-width: 12px; /* set the width of the border image */

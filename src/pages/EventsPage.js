@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonMenu, IonMenuToggle, IonButton, IonDatetime, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle } from '@ionic/react';
 import ApiCalendar from "react-google-calendar-api";
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 
 const config = {
   clientId: "857965574667-2ck09b4mt4uhr65b2ebe8regd2aj5r1p.apps.googleusercontent.com",
@@ -25,8 +25,9 @@ const getEvents = () => {
     maxResults: 100,
     orderBy: 'updated'
   }).then(({result }) => {
-    for (let e of result) {
-      events.set(e.start.date, {title: e.summary, subtitle: ",eow"})
+    for (let e of result.items) {
+      console.log(e);
+      events.set(e.start.date, {title: e.summary, subtitle: e.description, location: e.location, startTime: e.start, endTime: e.end})
     }
   });
 }
@@ -46,13 +47,14 @@ var highlightedDates = [
 
 const date = new Date();
 const currentDate = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`;
-let selectedDate = currentDate;
+
 
 const EventsPage = () => {
   useEffect ( getEvents, [])
+  const selectedDate = useState(currentDate);
   //getEvents();
   return (
-    <IonPage>
+    <IonPage id="main-content">
     <IonHeader>
       <IonToolbar>
         <IonTitle><p style={{fontSize: '20px', textAlign: 'center'}}>Events</p></IonTitle>
@@ -68,12 +70,12 @@ const EventsPage = () => {
         </IonToolbar>
       </IonHeader>
       <div style={{ width: '80%', margin:'auto', marginTop:"5%", display: 'flex', justifyContent: 'center'}}>
-      <ion-datetime value={selectedDate} highlightedDates={highlightedDates} min="2023" presentation="date" size="cover" preferWheel="false" ></ion-datetime>
+      <ion-datetime value={selectedDate} min="2023" presentation="date" size="cover" preferWheel="false" highlightedDates={highlightedDates}></ion-datetime>
       </div>
       <div style={{width:'80%', margin:'auto'}}>
         <ion-card>
           <ion-card-header>
-            <ion-card-title>Enter Event Name</ion-card-title>
+            <ion-card-title>{selectedDate} Enter Event Name</ion-card-title>
             <ion-card-subtitle>Time: 00:00:00AM | Location: GDC 2.100</ion-card-subtitle>
           </ion-card-header>
 

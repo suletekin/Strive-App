@@ -54,7 +54,7 @@ if (DEBUG_RESET) {
     test_exer['lastPerformed'] = new Date('2023-04-05T04:15:09.878Z');
     test_exer['cooldown'] = 60*24*5; //cd in minutes
     test_exer['scheduled'] = false;
-    test_exer['description'] = 'Spend a few minutes writing down your thoughts, feelings, and experiences in a journal. Reflect on your day, set goals, express gratitude, or simply unload your mind. Benefits: Enhances self-awareness, promotes emotional expression, and aids in stress relief.';
+    test_exer['description'] = 'Spend some time writing down your thoughts, feelings, and experiences in a journal. Reflect on your day, set goals, express gratitude, or simply unload your mind. Benefits: Enhances self-awareness, promotes emotional expression, and aids in stress relief.';
     exercises[test_exer['id']] = test_exer;
 
     // WORKOUT (1 daily - 30min)

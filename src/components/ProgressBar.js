@@ -1,5 +1,3 @@
-import { text } from "ionicons/icons";
-
 const ProgressBar = (props) => {
     const { bgcolor, completed } = props;
   
@@ -28,7 +26,7 @@ const ProgressBar = (props) => {
         paddingTop: '3px',
         color: 'white',
         fontWeight: 'bold',
-        fontSize: '30px',
+        fontSize: '25px',
         margin: '20px',
         height: '100%',
         minWidth: '100px',
@@ -38,7 +36,9 @@ const ProgressBar = (props) => {
     return (
       <div style={containerStyles}>
         <div style={fillerStyles}>
-          <div style={labelStyles}>{`${completed}%`}</div>
+          <div style={labelStyles}>
+              {`${completed}%`}
+          </div>
         </div>
       </div>
     );

@@ -1,5 +1,4 @@
-import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonIcon} from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonIcon, IonMenuToggle, IonButton} from '@ionic/react';
 import StriveLogo from '../images/strive_logo.jpg';
 import groupImg from '../images/group.jpg';
 
@@ -10,7 +9,8 @@ import './AboutPage.css';
 
 const AboutPage = () => {
   return (
-    <IonPage>
+    <IonPage id="main-content">
+    
     <IonHeader>
       <IonToolbar>
         <IonTitle><p style={{fontSize: '20px', textAlign: 'center'}}>About</p></IonTitle>
@@ -67,16 +67,16 @@ const AboutPage = () => {
 
       <div style={{display: 'flex', justifyContent: 'space-evenly', }}>
 
-        <div className="expandable" onClick={() => console.log()}>
+        <div className="expandable" onClick={() => console.log('')}>
           <IonIcon src={logoInstagram} style={{ fontSize: '3em' , marginLeft: "25px", marginTop: "-15px"}}> </IonIcon>
         </div>
-        <div className="expandable" onClick={() => console.log()}>
+        <div className="expandable" onClick={() => console.log('')}>
           <IonIcon src={logoFacebook} style={{ fontSize: '3em' , marginLeft: "25px", marginTop: "-15px"}}> </IonIcon>
         </div>
-        <div className="expandable" onClick={() => console.log()}>
+        <div className="expandable" onClick={() => console.log('')}>
           <IonIcon src={mailOutline} style={{ fontSize: '3em' , marginLeft: "25px", marginTop: "-15px"}}> </IonIcon>
         </div>
-        <div className="expandable" onClick={() => console.log()}>
+        <div className="expandable" onClick={() => console.log('')}>
           <IonIcon src={callOutline} style={{ fontSize: '3em' , marginLeft: "25px", marginTop: "-15px"}}> </IonIcon>
         </div>
       </div>

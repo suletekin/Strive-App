@@ -1,4 +1,4 @@
-import { IonContent, IonPage, IonSearchbar, IonHeader, IonToolbar, IonTitle, } from '@ionic/react';
+import { IonContent, IonPage, IonSearchbar, IonHeader, IonToolbar, IonTitle, IonMenuToggle, IonButton } from '@ionic/react';
 import { trashBin} from 'ionicons/icons';
 import ExerciseCard from '../components/ExerciseCard';
 import ExerciseEditModal from '../components/ExerciseEditModal';
@@ -71,12 +71,16 @@ function HomePage() {
   }, [exercises]);
 
   return (
-    <IonPage>
+    <>
+
+
+    <IonPage id="main-content">
       <IonHeader>
-      <IonToolbar>
-        <IonTitle><p style={{fontSize: '20px', textAlign: 'center'}}>Home</p></IonTitle>
-      </IonToolbar>
-    </IonHeader>
+        <IonToolbar>
+          <IonTitle><p style={{fontSize: '20px', textAlign: 'center'}}>Home</p></IonTitle>
+
+        </IonToolbar>
+      </IonHeader>
 
     
       <IonHeader collapse="condense">
@@ -103,6 +107,7 @@ function HomePage() {
       
       </IonContent>
     </IonPage>
+    </>
   );
 };
 

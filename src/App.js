@@ -13,7 +13,7 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { IonMenu, IonPage } from '@ionic/react';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonMenuToggle } from '@ionic/react';
-import { ellipse, pencil, barbell, calculator, triangle, home, calendarOutline, helpCircleOutline} from 'ionicons/icons';
+import { ellipse, pencil, barbell, calculator, triangle, home, calendarOutline, helpCircleOutline, menuOutline, closeOutline} from 'ionicons/icons';
 
 import AboutPage from './pages/AboutPage';
 import EventsPage from './pages/EventsPage';
@@ -52,36 +52,39 @@ const App = () => {
 
         
 
-<IonMenu contentId="main-content">
-    <IonHeader>
-      <IonToolbar>
-        <IonTitle>Menu Content</IonTitle>
-      </IonToolbar>
-    </IonHeader>
-    <IonContent className="ion-padding">
-      <IonMenuToggle>
-        <IonButton>Click to close the menu</IonButton>
-      </IonMenuToggle>  
-    </IonContent>
-  </IonMenu>
+      <div style={{zIndex: '300'}}>
+        <IonMenu contentId="main-content">
+          <IonHeader>
+            <IonToolbar>
+              <IonTitle>Settings</IonTitle>
+              <IonMenuToggle style={{zIndex:'100', position: 'absolute',  top: '-14px', width:'80px', height: '70px', overflow: 'hidden', right: '0px'}}>
+              <IonButton style={{width:'80px', height: '80px'}} color='transparent'>
+                <IonIcon style={{fontSize: 100}} src={closeOutline}/>
+              </IonButton>
+            </IonMenuToggle>
+            </IonToolbar>
+          </IonHeader>
+          <IonContent className="ion-padding">
 
-  <IonPage id="main-content">
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>Menu</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonContent className="ion-padding">
-          <IonMenuToggle>
-            <IonButton>Click to open the menu</IonButton>
-          </IonMenuToggle>
-        </IonContent>
-      </IonPage>
+          </IonContent>
+        </IonMenu>
+
+
+        <IonMenuToggle style={{position: 'absolute',  top: '-10px', width:'80px', height: '70px', overflow: 'hidden'}}>
+        <IonButton style={{width:'80px', height: '80px'}} color='transparent'>
+          <IonIcon style={{fontSize: 100}} src={menuOutline}/>
+        </IonButton>
+      </IonMenuToggle>
+      </div>
+      
+
+      
 
 
         <IonTabs>
-          <IonRouterOutlet>
 
+
+          <IonRouterOutlet>
 
             <Route exact path="/HomePage" component={HomePage}/>
 

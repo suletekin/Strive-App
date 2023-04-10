@@ -81,7 +81,7 @@ const ExerciseEditModal = forwardRef((props, ref) => {
                             </div>
                             <div style={{top: '0px', opacity: '0', overflow: 'hidden', position: 'absolute', width: '100%', height: '100%', backgroundColor: 'red'}}>
                                 <IonTabBar style={{height: '100%'}}>
-                                    <IonTabButton tab='unu' href={'/PerformPage/' + props['id']}></IonTabButton>
+                                    <IonTabButton onClick={() => {console.log('')}} tab='unu' href={'/PerformPage/' + props['id']}></IonTabButton>
                                 </IonTabBar>
                             </div>
                         </div>
