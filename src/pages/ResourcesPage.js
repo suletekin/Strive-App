@@ -32,8 +32,9 @@ const ResourcesPage = () => {
 
 
 
+        <div class = "dropdown-content">
           <p style={{textAlign: "center", marginLeft: "20px", fontSize: "20px", marginRight: "20px", marginTop: "-7px"}}> Tito's Way Scholarship</p>
-
+        </div>
 
           <p style={{textAlign: "center", marginLeft: "20px", fontSize: "20px", marginRight: "20px", marginTop: "-7px"}}> Sample links</p>
           <p>Click here to sign up for the newsletter!</p>
