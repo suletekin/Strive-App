@@ -30,7 +30,6 @@ import { useState, useRef, useEffect } from 'react';
 
 function HomePage() {
 
-
   const modalRef = useRef();
   function openExcerciseEditModal(exercise) {
     setExerciseEditModalProps(exercise);
@@ -73,6 +72,8 @@ function HomePage() {
   return (
     <>
 
+    
+
 
     <IonPage id="main-content">
       <IonHeader>
@@ -97,6 +98,11 @@ function HomePage() {
 
         <br></br>
         <br></br>
+
+        <h3 style={{}}>Hey Sule</h3>
+        <h2>Good Morning</h2>
+
+        <h1>Find Your Purpose Today!</h1>
 
         {results.map(result => (
           <ExerciseCard key={result} {...exercises[result]} currentTime={currentTime} onClick={openExcerciseEditModal} />
