@@ -1,4 +1,3 @@
-# strive-app
 Welcome to the Strive App developed in React!
 
 <img width="239" alt="Home" src="https://github.com/suletekin/Strive-App/assets/72993040/ff6d62a1-62a1-45be-92a0-080e4fa6e5e6">
