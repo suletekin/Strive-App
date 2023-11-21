@@ -3,9 +3,9 @@
 /* Style for the "Scholarships" tab */
 .block {
     font-family: geneva;
+    flex-direction: column;
     text-shadow: 4px 3px #6867AC;
     text-align: center;
-    vertical-align: middle;
     font-size: 40px;
     font-weight: 700;
     border-color: #000000;
@@ -29,6 +29,7 @@
     align-items: flex-start; /* Align items to the top */
     padding: 5px;
     color: black;
+    justify-content: center;
 }
 
 .circle-container {
@@ -44,6 +45,7 @@
     align-items: center;
     text-align: center;
     margin-top: 15px; /* Add margin to separate from the circle container */
+    margin-right: 50px;
 }
 
 .circle{
@@ -57,5 +59,7 @@
 p{
     font-family: 'ADLaM Display', cursive;
 }
+
+
 
 

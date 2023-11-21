@@ -4,6 +4,7 @@ import ExerciseCard from '../components/ExerciseCard';
 import ExerciseEditModal from '../components/ExerciseEditModal';
 import {exercises} from '../save/Filesys';
 import { useState, useRef, useEffect } from 'react';
+import React  from 'react';
 
 //We want the exercisecards to change depending on what i type in
 
@@ -99,10 +100,7 @@ function HomePage() {
         <br></br>
         <br></br>
 
-        <h3 style={{}}>Hey Sule</h3>
-        <h2>Good Morning</h2>
-
-        <h1>Find Your Purpose Today!</h1>
+        <h1 style={{marginLeft: "10px"}}>Find Your Purpose Today!</h1>
 
         {results.map(result => (
           <ExerciseCard key={result} {...exercises[result]} currentTime={currentTime} onClick={openExcerciseEditModal} />

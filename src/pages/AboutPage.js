@@ -119,35 +119,39 @@ const AboutPage = () => {
             <h1>Community</h1>
             <p style={{textAlign: "left", marginLeft: "8px"}}>We believe that purpose is ignited by discovering one's passion(s). We have
               found that passion often emerges when individuals immerse themselves in the service of others.</p>
-            <h1>Strive 60</h1>
-            <p style={{textAlign: "left", marginLeft: "8px"}}>Strive 60 is about building habits that we believe are fundamental to personal
-            growth.</p>
-            <ul style={{textAlign: "left"}}>
-              <li>
-                  30-Minute Workout
-              </li>
-              <li>
-                  3-Minute Intentional Silence
-              </li>
-              <li>
-                  10-Minute Reading
-              </li>
-              <li>
-                  1 Daily Reflection Journal Entry
-              </li>
-              <li>
-                  2 Liters of Water
-              </li>
-            </ul>
         </div>
       </div>
   </div>
 
+  <br></br>
 
-  
 
-
-    <br></br>
+  <div className='container'>
+      <div className='bubble' style={{height: "auto", width: "355px"}}>
+        <div style={{ position: 'relative' }}>
+            <h1>Strive 60</h1>
+            <p style={{textAlign: "left", marginLeft: "8px"}}>Strive 60 is about building habits that we believe are fundamental to personal
+            growth.</p>
+            <div>
+              <p>
+              30-Minute Workout 🏋️
+              </p>
+              <p>
+              3-Minute Intentional Silence 🤫
+              </p>
+              <p>
+              10-Minute Reading 📚
+              </p>
+              <p>
+              1 Daily Reflection Journal Entry ✍️
+              </p>
+              <p>
+              2 Liters of Water 🚰
+              </p>
+            </div>
+        </div>
+      </div>
+  </div>
 
     
       
